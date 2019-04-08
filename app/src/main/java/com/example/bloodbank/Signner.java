@@ -242,11 +242,7 @@ public class Signner extends AppCompatActivity implements OnMapReadyCallback, Go
             public void onClick(View view) {
                 Intent intent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
                 startActivityForResult(intent, 1);
-
-
-            }
-
-        });
+            }});
 
         ArrayList<String> bloodgrp = new ArrayList<String>();
         bloodgrp.add("O+");
@@ -273,14 +269,7 @@ public class Signner extends AppCompatActivity implements OnMapReadyCallback, Go
                     case R.id.female:
                         gender = "Female";
                         break;
-
-
-                }
-
-            }
-        });
-
-    }
+                } }}); }
 
     private void writeNewUser(final String userId) {
 
@@ -293,7 +282,8 @@ public class Signner extends AppCompatActivity implements OnMapReadyCallback, Go
                 fileReference.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
                     @Override
                     public void onSuccess(Uri uri) {
-                        Userinfo user = new Userinfo(userId,namer1.getText().toString(), namer2.getText().toString(), namer3.getText().toString(), emailer1.getText().toString(), phone.getText().toString(), s.getSelectedItem().toString(), gender, uri.toString());
+                        Userinfo user = new Userinfo(userId,namer1.getText().toString(), namer2.getText().toString(), namer3.getText().toString(), emailer1.getText().toString(), phone.getText().toString(),
+                                s.getSelectedItem().toString(), gender, uri.toString());
                         GeoHash geoHash = new GeoHash(new GeoLocation(finalLocation.latitude, finalLocation.longitude));
                         Map<String, Object> updates = new HashMap<>();
                         updates.put("users/" +  userId, user);
@@ -381,7 +371,8 @@ public class Signner extends AppCompatActivity implements OnMapReadyCallback, Go
             }
         };
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
+                (this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             requestPermission();
         }else{
 

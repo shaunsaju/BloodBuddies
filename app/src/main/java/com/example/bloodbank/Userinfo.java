@@ -11,21 +11,21 @@ public class Userinfo {
     public String mImageUrl;
     public String userid;
 
-
     public Userinfo() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public Userinfo(String userid,String name1, String name2,String name3,String email,String phone,String bldgrp,String gender,String mImageUrl) {
-        this.userid=userid;
+    public Userinfo(String userid, String name1, String name2, String name3, String email, String phone, String bldgrp, String gender, String mImageUrl) {
+        this.userid = userid;
         this.name1 = name1;
         this.name2 = name2;
         this.name3 = name3;
         this.email = email;
         this.phone = phone;
-        this.bldgrp=bldgrp;
-        this.gender=gender;
-        this.mImageUrl=mImageUrl;
+        this.bldgrp = bldgrp;
+        this.gender = gender;
+        this.mImageUrl = mImageUrl;
+
     }
 
     public String getUserid() {
@@ -36,52 +36,67 @@ public class Userinfo {
         this.userid = userid;
     }
 
-    public String getName1(){
+    public String getName1() {
         return name1;
     }
-    public void setName1(String name){
-        name1=name;
+
+    public void setName1(String name) {
+        name1 = name;
     }
-    public String getName2(){
+
+    public String getName2() {
         return name2;
     }
-    public void setName2(String name){
-        name2=name;
+
+    public void setName2(String name) {
+        name2 = name;
     }
-    public String getName3(){
+
+    public String getName3() {
         return name3;
     }
-    public void setName3(String name){
-        name3=name;
+
+    public void setName3(String name) {
+        name3 = name;
     }
-    public String getEmail(){
+
+    public String getEmail() {
         return email;
     }
-    public void setEmail(String name){
-        email=name;
+
+    public void setEmail(String name) {
+        email = name;
     }
-    public String getPhone(){
+
+    public String getPhone() {
         return phone;
     }
-    public void setPhone(String name){
-        phone=name;
+
+    public void setPhone(String name) {
+        phone = name;
     }
-    public String getBldgrp(){
+
+    public String getBldgrp() {
         return bldgrp;
     }
-    public void setBldgrp(String name){
-        bldgrp=name;
+
+    public void setBldgrp(String name) {
+        bldgrp = name;
     }
-    public String getmImageUrl(){
+
+    public String getmImageUrl() {
         return mImageUrl;
     }
-    public void setmImageUrl(String name){
-        mImageUrl=name;
+
+    public void setmImageUrl(String name) {
+        mImageUrl = name;
     }
-    public String getGender(){
+
+    public String getGender() {
         return gender;
     }
-    public void setGender(String name){
-        gender=name;
+
+    public void setGender(String name) {
+        gender = name;
     }
 }

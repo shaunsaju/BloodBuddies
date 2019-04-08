@@ -24,7 +24,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:windowSoftInputMode="adjustNothing">
-        <activity android:name=".ChatActivity"></activity>
+        <activity
+            android:name=".InfoActivity"
+            android:label="@string/title_activity_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ChatActivity" />
         <activity
             android:name=".HomeActivity"
             android:label="Bloody Helpful"

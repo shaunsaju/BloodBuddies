@@ -9,6 +9,19 @@
     tools:showIn="@layout/app_bar_main">
 
 
+    <TextView
+        android:id="@+id/emptylist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_marginTop="206dp"
+        android:fontFamily="sans-serif-medium"
+        android:layout_centerHorizontal="true"
+        android:text="Your Conections would appear here"
+        android:textColor="@color/colorPrimary"
+        android:textSize="24sp" />
+
     <ListView
         android:id="@+id/userslist"
         android:layout_width="match_parent"

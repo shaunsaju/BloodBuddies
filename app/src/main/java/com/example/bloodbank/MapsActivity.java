@@ -170,10 +170,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         else
         {
             Toast.makeText(this, "Unable to get your location", Toast.LENGTH_SHORT).show();
-
-        }
-
-    }
+        } }
 
 
 
@@ -223,12 +220,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
     public void getClosestDonor(final Location lastLocation, final String bldgrp){
-
-       final Location lastl=lastLocation;
-
-
-
-        GeoFire geoFire=new GeoFire(mDatabase.child(bldgrp));
+        final Location lastl=lastLocation;
+       GeoFire geoFire=new GeoFire(mDatabase.child(bldgrp));
         GeoQuery geoQuery=geoFire.queryAtLocation(new GeoLocation(lastl.getLatitude(),lastl.getLongitude()),radius);
         geoQuery.removeAllListeners();
         geoQuery.addGeoQueryEventListener(new GeoQueryEventListener() {
@@ -254,16 +247,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                             double longitude = Double.parseDouble(lng);
                             dlatlng = new LatLng(latitude, longitude);
                             ulatlng = new LatLng(lastLocation.getLatitude(), lastLocation.getLongitude());
-
-
-                          //  marker= mMap.addMarker(new MarkerOptions().position(dlatlng).title( name+"'s Location"));
-
-
-
-
-                                mBottomSheetBehaviour.setState(BottomSheetBehavior.STATE_EXPANDED);
-
-
+                            mBottomSheetBehaviour.setState(BottomSheetBehavior.STATE_EXPANDED);
                             LatLngBounds.Builder builder = new LatLngBounds.Builder();
                             builder.include(ulatlng);
                             builder.include(dlatlng);
@@ -278,20 +262,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                     CameraUpdate zout = CameraUpdateFactory.zoomBy(-1);
                                     mMap.animateCamera(zout);
                                 }
-                            });
-
-                        }
-
-                        @Override
+                            }); }
+                            @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
-
                         }
                     });
                     Database.child(donorid).addValueEventListener(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            // showInformation(dataSnapshot);
-
                             Userinfo user = dataSnapshot.getValue(Userinfo.class);
                             name= user.name1+" "+user.name2+" "+user.name3;
                             email=user.email;
@@ -365,18 +343,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if(!userfound){
                     radius++;
                     getClosestDonor(lastl,bldgrp);
-                }
-
-            }
-
+                } }
             @Override
             public void onGeoQueryError(DatabaseError error) {
 
             }
-        });
-    }
-
-
+        }); }
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mMap = googleMap;
@@ -388,9 +360,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 return false;
             }
         });
-
-
-
         locationManager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         locationListener = new LocationListener() {
             @Override
@@ -399,26 +368,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 if(!datafetched) {
                     centerMapOnLocation(location);
                 }
-
-            }
-
-            @Override
+            }@Override
             public void onStatusChanged(String s, int i, Bundle bundle) {
 
             }
 
             @Override
             public void onProviderEnabled(String s) {
-
             }
-
             @Override
             public void onProviderDisabled(String s) {
 
             }
         };
 
-        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission
+                (this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             requestPermission();
         }else{
             if(locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
@@ -527,9 +492,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-
-
-
                 marker=   mMap.addMarker(new MarkerOptions()
                         .position(dlatlng)
                         .icon(BitmapDescriptorFactory.fromBitmap(bitmap))

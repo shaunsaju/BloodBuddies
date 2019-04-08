@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="0dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/info"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="      Information"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:fontFamily="@font/changa_medium" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    First Name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/namer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                 />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name2"
+                android:layout_width="93dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    Middle Name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/namer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                 />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/name3"
+                android:layout_width="95dp"
+                android:layout_height="34dp"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="    Last Name"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/namer3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                 />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/bloodgroup"
+                android:layout_width="211dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    Blood Group"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/bloodgrouper"
+                android:layout_width="264dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/gender"
+                android:layout_width="212dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="    Gender"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/genderer"
+                android:layout_width="263dp"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorAccent" />
+
+        <TextView
+            android:id="@+id/mapper"
+            android:layout_width="237dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="        Location"
+            android:textColor="@color/colorAccent"
+            android:textSize="30sp"
+            app:fontFamily="@font/changa_medium" />
+
+        <TextView
+            android:id="@+id/locater"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorAccent" />
+
+
+        <TextView
+            android:id="@+id/verifier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:text="Contact"
+            android:textColor="@color/colorAccent"
+            android:textSize="24sp"
+            app:fontFamily="@font/changa_medium" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/email1"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="    Email"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/emailer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/phone"
+                android:layout_width="95dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="0dp"
+                android:layout_weight="1"
+                android:padding="0dp"
+                android:text="    Phone"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/phoner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorAccent" />
+        <Button
+            android:id="@+id/connecter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+
+            android:text="Connect"
+            android:textColor="@color/colorAccent" />
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -69,9 +69,7 @@ import java.util.List;
 import static android.Manifest.permission.READ_CONTACTS;
 import static com.example.bloodbank.R.layout.activity_login;
 
-/**
- * A login screen that offers login via email/password.
- */
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener,View.OnKeyListener {
 
 
@@ -224,8 +222,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     showSettingsDialog();
 
                 }
-
-
             }
 
             @Override

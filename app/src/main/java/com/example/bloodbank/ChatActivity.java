@@ -46,6 +46,7 @@ public class ChatActivity extends AppCompatActivity {
     String dimage;
     ImageView donorimage;
     TextView donorname;
+    String dbloodgrp;
     
 
     @Override
@@ -58,7 +59,11 @@ public class ChatActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.showinfo) {
-            Toast.makeText(this, "hai", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(ChatActivity.this, InfoActivity.class);
+            intent.putExtra("Requestnumber", 1);
+            intent.putExtra("userid", donorid);
+            intent.putExtra("bloodgroup", dbloodgrp);
+            startActivity(intent);
         }
         if(id==R.id.removeconnection){
             FirebaseDatabase.getInstance().getReference("connections").child(FirebaseAuth.getInstance().getCurrentUser().getUid()).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -104,6 +109,7 @@ public class ChatActivity extends AppCompatActivity {
         Intent intent=getIntent();
         donorid=intent.getStringExtra("donorid");
         username=intent.getStringExtra("username");
+        dbloodgrp=intent.getStringExtra("bloodgrp");
         dname=intent.getStringExtra("donorname");
         dimage=intent.getStringExtra("donorimage");
         donorimage=findViewById(R.id.donorimage);
@@ -142,10 +148,6 @@ public class ChatActivity extends AppCompatActivity {
                         ModelChat chat = dataSnapshot.getValue(ModelChat.class);
                         listofmessages.add(new ModelChat(chat.getMessagetext(), chat.getMessageuser()));
                         chatadapter.notifyDataSetChanged();
-
-
-
-
             }
 
             @Override
