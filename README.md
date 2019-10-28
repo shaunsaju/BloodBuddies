@@ -1,2 +1,1 @@
-# BloodBuddies
-this is for my brothers from another mother.
+# A revolutionary blood donation app, that removes complexity out of blood donation
